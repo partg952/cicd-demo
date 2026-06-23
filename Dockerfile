@@ -1,3 +1,11 @@
-FROM alpine:latest
+FROM node:22-alpine
 
-CMD ["echo", "Hello from Docke"]
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "test"]
