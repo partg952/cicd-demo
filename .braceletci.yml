@@ -4,3 +4,7 @@ jobs:
     image: "node:latest"
     steps:
       - run: "npm run test"
+  build:
+    image: "node:latest"
+    steps:
+      - run: "npm run build"
